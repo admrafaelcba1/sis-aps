@@ -1,0 +1,10 @@
+streamlit
+pandas
+openpyxl
+requests
+plotly
+pydeck
+xlrd
+geopandas
+pyogrio
+shapely
