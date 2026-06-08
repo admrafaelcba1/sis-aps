@@ -146,7 +146,16 @@ def _tabela_colorida(df: pd.DataFrame, altura: int = 420):
     for c in show.columns:
         if pd.api.types.is_float_dtype(show[c]) or pd.api.types.is_integer_dtype(show[c]):
             show[c] = pd.to_numeric(show[c], errors='coerce')
-    styler = show.style.applymap(_classe_style, subset=[c for c in show.columns if 'class' in c.lower() or 'situa' in c.lower() or 'prioridade' in c.lower()])
+    
+    style_cols = [c for c in show.columns if 'class' in c.lower() or 'situa' in c.lower() or 'prioridade' in c.lower()]
+    try:
+        if style_cols:
+            styler = show.style.map(_classe_style, subset=style_cols)
+        else:
+            styler = show.style
+    except Exception:
+        st.dataframe(show, use_container_width=True, height=altura)
+        return
     st.dataframe(styler, use_container_width=True, height=altura)
 
 

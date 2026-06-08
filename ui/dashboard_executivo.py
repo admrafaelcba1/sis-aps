@@ -633,56 +633,146 @@ def _render_validacao_dados(df: pd.DataFrame):
         render_dataframe(df.sort_values("score_prioridade_integrada", ascending=False)[cols].head(25), use_container_width=True, hide_index=True)
 
 
-def _render_territorios_desassistidos(df: pd.DataFrame):
-    st.markdown("#### Quem pode estar desassistido — territórios e zonas rurais")
-    st.caption("Lista os territórios mais distantes da UBS/APS mais próxima. A distância é geodésica em linha reta e deve ser validada com rota real, ERS e município.")
-    municipio = None
-    if not df.empty and "municipio" in df.columns:
-        opcoes = ["Todos"] + sorted(df["municipio"].dropna().astype(str).unique())
-        municipio_sel = st.selectbox("Filtrar territórios por município", opcoes, key="vazio_integrado_territorios_desassistidos_municipio")
-        if municipio_sel != "Todos":
-            municipio = municipio_sel
-    terr = carregar_territorios_desassistidos(municipio=municipio, limite=300)
-    if terr.empty:
-        st.info("A camada de distância territorial ainda não retornou territórios para esta seleção.")
-        return
-    col1, col2 = st.columns([1.05, 1])
-    with col1:
-        # HOTFIX V49 - evita KeyError: False quando latitude/longitude não existem no dataframe
-    if "latitude" not in terr.columns or "longitude" not in terr.columns:
-        mapa = terr.iloc[0:0].copy()
-    else:
-        _lat = pd.to_numeric(terr["latitude"], errors="coerce")
-        _lon = pd.to_numeric(terr["longitude"], errors="coerce")
-        mapa = terr[_lat.notna() & _lon.notna() & _lat.ne(0) & _lon.ne(0)].copy()
-        if not mapa.empty:
-            fig = px.scatter_mapbox(
-                mapa.head(150),
-                lat="latitude",
-                lon="longitude",
-                size="populacao",
-                color="distancia_ubs_mais_proxima_km",
-                hover_name="territorio",
-                hover_data=[c for c in ["municipio", "tipo_analise", "tipo_territorio", "classe_distancia_aps", "ubs_mais_proxima", "populacao"] if c in mapa.columns],
-                zoom=4.5 if municipio is None else 8,
-                height=500,
-                title="Territórios mais distantes da UBS/APS",
-                color_continuous_scale="YlOrRd",
-                size_max=28,
-            )
-            fig.update_layout(mapbox_style="open-street-map", margin={"r": 0, "t": 42, "l": 0, "b": 0})
-            fig.update_coloraxes(colorbar_title_text="Distância até UBS (km)")
-            _plotly_chart(fig, "mapa_territorios_desassistidos")
-        else:
-            st.info("Sem coordenadas suficientes para mapa dos territórios desta seleção.")
-    with col2:
-        cols = [c for c in [
-            "municipio", "tipo_analise", "territorio", "tipo_territorio", "populacao", "classe_distancia_aps",
-            "distancia_ubs_mais_proxima_km", "ubs_mais_proxima", "municipio_ubs_mais_proxima",
-        ] if c in terr.columns]
-        render_dataframe(terr[cols].head(80), use_container_width=True, hide_index=True)
-    _baixar_csv(terr, "territorios_potencialmente_desassistidos.csv", "Baixar territórios potencialmente desassistidos")
+def _render_territorios_desassistidos(terr):
+    """Renderização segura dos territórios potencialmente desassistidos.
 
+    Hotfix V50.1:
+    - evita erro de indentação deixado por patch anterior;
+    - evita KeyError quando latitude/longitude não existem;
+    - mantém a seção visível mesmo quando a camada territorial não tem coordenadas;
+    - preserva uma leitura executiva para apresentação no Streamlit Cloud.
+    """
+    import pandas as pd
+    import streamlit as st
+    import plotly.express as px
+
+    st.markdown("### Quem pode estar desassistido — territórios, localidades e zona rural")
+    st.caption(
+        "Leitura territorial preliminar: distância geodésica, ruralidade, vulnerabilidade e população ajudam a indicar "
+        "quem pode exigir validação local, visita técnica, reorganização de equipes ou apoio de transporte sanitário."
+    )
+
+    if terr is None:
+        st.info("A base territorial ainda não está disponível para esta visualização.")
+        return
+
+    try:
+        df = terr.copy()
+    except Exception:
+        st.info("Não foi possível preparar a base territorial para esta visualização.")
+        return
+
+    if df.empty:
+        st.info("Não há territórios/localidades disponíveis para esta seleção.")
+        return
+
+    # Normaliza possíveis nomes de colunas usados ao longo das versões do sistema.
+    rename_map = {
+        "lat": "latitude",
+        "lng": "longitude",
+        "lon": "longitude",
+        "distancia_ubs_km": "distancia_ubs_mais_proxima_km",
+        "distancia_km": "distancia_ubs_mais_proxima_km",
+        "distancia_hospitalar_km": "distancia_hospital_km",
+    }
+    for origem, destino in rename_map.items():
+        if origem in df.columns and destino not in df.columns:
+            df[destino] = df[origem]
+
+    # Garante colunas mínimas para não quebrar a tela.
+    for col in ["municipio", "territorio", "tipo_territorial", "classificacao_distancia", "latitude", "longitude"]:
+        if col not in df.columns:
+            df[col] = "" if col not in ["latitude", "longitude"] else pd.NA
+
+    # Distância preferencial: UBS; se não existir, usa hospital; se não existir, fica vazio.
+    dist_col = None
+    for c in [
+        "distancia_ubs_mais_proxima_km",
+        "distancia_hospital_km",
+        "distancia_hospitalar_km",
+        "distancia_media_km",
+        "distancia_km",
+    ]:
+        if c in df.columns:
+            dist_col = c
+            break
+
+    if dist_col:
+        df[dist_col] = pd.to_numeric(df[dist_col], errors="coerce")
+        df = df.sort_values(dist_col, ascending=False, na_position="last")
+
+    lat = pd.to_numeric(df.get("latitude"), errors="coerce")
+    lon = pd.to_numeric(df.get("longitude"), errors="coerce")
+    tem_geo = lat.notna() & lon.notna() & lat.between(-35, 6) & lon.between(-75, -45) & (lat != 0) & (lon != 0)
+
+    c1, c2, c3, c4 = st.columns(4)
+    c1.metric("Territórios analisados", f"{len(df):,.0f}".replace(",", "."))
+    if dist_col:
+        c2.metric("Maior distância", f"{df[dist_col].max(skipna=True):.1f} km".replace(".", ","))
+        c3.metric("Distância média", f"{df[dist_col].mean(skipna=True):.1f} km".replace(".", ","))
+    else:
+        c2.metric("Maior distância", "—")
+        c3.metric("Distância média", "—")
+    c4.metric("Com coordenadas", f"{int(tem_geo.sum()):,.0f}".replace(",", "."))
+
+    st.info(
+        "Como ler: cada linha representa território/localidade/setor ou assentamento. Distâncias altas indicam barreira "
+        "territorial provável, mas não substituem rota real, tempo de deslocamento, validação da ERS e informação municipal."
+    )
+
+    if tem_geo.any():
+        mapa = df.loc[tem_geo].copy()
+        mapa["latitude"] = lat.loc[tem_geo]
+        mapa["longitude"] = lon.loc[tem_geo]
+        if dist_col:
+            mapa["distancia_plot"] = pd.to_numeric(mapa[dist_col], errors="coerce").fillna(0)
+        else:
+            mapa["distancia_plot"] = 1
+
+        hover_cols = [c for c in ["municipio", "territorio", "tipo_territorial", "classificacao_distancia", dist_col] if c and c in mapa.columns]
+        fig = px.scatter_mapbox(
+            mapa.head(1500),
+            lat="latitude",
+            lon="longitude",
+            size="distancia_plot",
+            color="classificacao_distancia" if "classificacao_distancia" in mapa.columns else None,
+            hover_data=hover_cols,
+            zoom=4,
+            height=520,
+            title="Territórios/localidades com coordenadas — leitura preliminar de distância"
+        )
+        fig.update_layout(mapbox_style="open-street-map", margin=dict(l=0, r=0, t=45, b=0))
+        st.plotly_chart(fig, use_container_width=True)
+    else:
+        st.warning(
+            "A camada territorial carregada não possui latitude/longitude válidas suficientes para desenhar o mapa nesta seção. "
+            "A tabela abaixo permanece disponível para análise e validação dos dados."
+        )
+
+    # Tabela executiva com colunas existentes.
+    cols_preferidas = [
+        "municipio", "territorio", "tipo_territorial", "classificacao_distancia",
+        "populacao", "populacao_estimada", "vulnerabilidade_social",
+        "distancia_ubs_mais_proxima_km", "distancia_hospital_km",
+        "latitude", "longitude"
+    ]
+    cols = [c for c in cols_preferidas if c in df.columns]
+    if not cols:
+        cols = list(df.columns[:12])
+
+    st.dataframe(df[cols].head(300), use_container_width=True, hide_index=True)
+
+    try:
+        csv = df[cols].to_csv(index=False).encode("utf-8-sig")
+        st.download_button(
+            "Baixar territórios potencialmente desassistidos",
+            data=csv,
+            file_name="territorios_potencialmente_desassistidos.csv",
+            mime="text/csv",
+            use_container_width=True,
+        )
+    except Exception:
+        pass
 
 def _classificar_prioridade_territorial(row: pd.Series) -> str:
     classe = str(row.get("classe_distancia_aps", "")).strip().lower()
