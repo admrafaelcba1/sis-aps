@@ -12,6 +12,25 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 
+
+# HOTFIX V49 - compatibilidade Streamlit Cloud
+# Garante que o banco principal seja encontrado quando o arquivo foi enviado como .db.
+try:
+    from pathlib import Path as _APSPath
+    _db_sem_ext = _APSPath("data/aps_inteligencia")
+    _db_com_ext = _APSPath("data/aps_inteligencia.db")
+    if _db_com_ext.exists() and not _db_sem_ext.exists():
+        try:
+            _db_sem_ext.symlink_to(_db_com_ext.name)
+        except Exception:
+            try:
+                _db_sem_ext.write_bytes(_db_com_ext.read_bytes())
+            except Exception:
+                pass
+except Exception:
+    pass
+# FIM HOTFIX V49
+
 try:
     from services.auditoria_service import registrar_evento, garantir_tabela_auditoria
 except Exception:
@@ -617,7 +636,7 @@ def render_inicio():
                 return 'background-color:#D1FADF;color:#05603A;font-weight:800;'
             return ''
         st.dataframe(
-            pend.style.applymap(_style_status, subset=['Prioridade']),
+            pend.style.map(_style_status, subset=['Prioridade']),
             use_container_width=True,
             hide_index=True,
             height=300,

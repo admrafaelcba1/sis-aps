@@ -648,7 +648,13 @@ def _render_territorios_desassistidos(df: pd.DataFrame):
         return
     col1, col2 = st.columns([1.05, 1])
     with col1:
-        mapa = terr[(pd.to_numeric(terr.get("latitude", 0), errors="coerce") != 0) & (pd.to_numeric(terr.get("longitude", 0), errors="coerce") != 0)].copy()
+        # HOTFIX V49 - evita KeyError: False quando latitude/longitude não existem no dataframe
+    if "latitude" not in terr.columns or "longitude" not in terr.columns:
+        mapa = terr.iloc[0:0].copy()
+    else:
+        _lat = pd.to_numeric(terr["latitude"], errors="coerce")
+        _lon = pd.to_numeric(terr["longitude"], errors="coerce")
+        mapa = terr[_lat.notna() & _lon.notna() & _lat.ne(0) & _lon.ne(0)].copy()
         if not mapa.empty:
             fig = px.scatter_mapbox(
                 mapa.head(150),

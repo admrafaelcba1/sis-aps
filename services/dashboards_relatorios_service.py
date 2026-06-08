@@ -209,7 +209,13 @@ def montar_base_dashboard_integrado() -> pd.DataFrame:
     base['pop_por_equipe_ref'] = _get_numeric(base, ['pop_por_equipe'], 0)
     base.loc[base['pop_por_equipe_ref'].fillna(0).eq(0) & equipes.notna(), 'pop_por_equipe_ref'] = (pop / equipes)
     base['pop_por_ubs_ref'] = _get_numeric(base, ['pop_por_ubs'], 0)
-    base.loc[base['pop_por_ubs_ref'].fillna(0).eq(0) & ubs.notna(), 'pop_por_ubs_ref'] = (pop / ubs)
+    # HOTFIX V49 - pandas cloud: garante dtype float antes de preencher população por UBS
+    _calc_pop_por_ubs = (pop / ubs).replace([float("inf"), -float("inf")], pd.NA)
+    if "pop_por_ubs_ref" not in base.columns:
+        base["pop_por_ubs_ref"] = pd.Series(index=base.index, dtype="float64")
+    base["pop_por_ubs_ref"] = pd.to_numeric(base["pop_por_ubs_ref"], errors="coerce").astype("float64")
+    _mask_pop_por_ubs = base["pop_por_ubs_ref"].fillna(0).eq(0) & _calc_pop_por_ubs.notna()
+    base.loc[_mask_pop_por_ubs, "pop_por_ubs_ref"] = _calc_pop_por_ubs.loc[_mask_pop_por_ubs].astype("float64")
 
     base['cadunico_pessoas'] = _get_numeric(base, ['cadunico_pessoas', 'pessoas_cadunico', 'total_pessoas_cadunico'], 0)
     base['bolsa_familia_pessoas'] = _get_numeric(base, ['bolsa_familia_pessoas', 'pessoas_bolsa_familia', 'total_pessoas_bolsa_familia'], 0)

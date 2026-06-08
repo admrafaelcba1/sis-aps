@@ -1,0 +1,2 @@
+﻿regiao_saude,municipio,codigo_ibge,cnes,nome_unidade,tipo_unidade,endereco,latitude_atual,longitude_atual,fonte_coordenada_atual,status_atual,latitude_validada,longitude_validada,fonte_validacao,validado_por,data_validacao,observacao,usar_no_calculo,prioridade
+,Exemplo,,0000000,NOME DA UBS,UBS,Endereço completo,,,API/base automática,Pendente de coordenada oficial ou validação técnica,-15.600000,-56.100000,SES/ERS/Município/CNES conferido,Nome/setor,2026-06-01,Exemplo; substituir pelos dados reais,Sim,Alta

@@ -1,0 +1,143 @@
+﻿codigo_ibge,municipio,regiao_saude,latitude,longitude,area_km2,fonte_geo,atualizado_em
+5100102,Acorizal,Baixada Cuiabana,-15.1944,-56.29475,853.525,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:21
+5100201,Água Boa,Médio Araguaia,-14.08685,-52.4744,7571.972,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:22
+5100250,Alta Floresta,Alto Tapajós,-10.04175,-56.40535,9005.792,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:23
+5100300,Alto Araguaia,Região Sul,-17.4215,-53.4849,5439.089,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:24
+5100359,Alto Boa Vista,Norte Araguaia Karajá,-11.803,-51.76735,2234.325,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:24
+5100409,Alto Garças,Região Sul,-16.853,-53.5821,3846.357,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:25
+5100508,Alto Paraguai,Centro Norte,-14.76905,-56.674,1848.544,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:26
+5100607,Alto Taquari,Região Sul,-17.7729,-53.3033,1430.37,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:27
+5100805,Apiacás,Alto Tapajós,-8.577,-57.8036,20555.831,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:27
+5101001,Araguaiana,Garças Araguaia,-15.10205,-51.7648,6410.912,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:28
+5101209,Araguainha,Região Sul,-16.72635,-53.138,687.136,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:29
+5101258,Araputanga,Oeste,-15.26265,-58.487,1676.216,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:30
+5101308,Arenápolis,Médio Norte,-14.505,-56.84765,415.437,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:30
+5101407,Aripuanã,Noroeste,-10.1037,-59.74305,24762.107,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:31
+5101605,Barão de Melgaço,Baixada Cuiabana,-16.7449,-56.1085,11403.367,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:32
+5101704,Barra do Bugres,Médio Norte,-15.12045,-57.83095,6029.299,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:33
+5101803,Barra do Garças,Garças Araguaia,-15.3561,-52.56065,8390.209,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:33
+5101837,Boa Esperança do Norte,Teles Pires,,,,Erro: 500 Server Error: Internal Server Error for url: https://servicodados.ibge.gov.br/api/v3/malhas/municipios/5101837?formato=application%2Fvnd.geo%2Bjson&qualidade=minima,2026-05-23T18:40:34
+5101852,Bom Jesus do Araguaia,Médio Araguaia,-12.20385,-51.6486,4277.004,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:35
+5101902,Brasnorte,Noroeste,-12.11025,-57.9102,16065.885,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:35
+5102504,Cáceres,Oeste,-16.54075,-57.9018,24606.894,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:36
+5102603,Campinápolis,Garças Araguaia,-14.2572,-53.07685,6014.064,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:37
+5102637,Campo Novo do Parecis,Médio Norte,-13.6581,-57.88275,9452.358,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:38
+5102678,Campo Verde,Região Sul,-15.42035,-54.94265,4793.328,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:38
+5102686,Campos de Júlio,Vale do Guaporé,-13.5758,-59.187,6805.168,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:39
+5102694,Canabrava do Norte,Araguaia Xingu,-11.2277,-51.8134,3454.46,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:40
+5102702,Canarana,Médio Araguaia,-13.19035,-52.2409,10884.344,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:41
+5102793,Carlinda,Alto Tapajós,-10.06445,-55.8811,2413.979,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:42
+5102850,Castanheira,Noroeste,-10.93175,-58.66205,3743.181,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:43
+5103007,Chapada dos Guimarães,Baixada Cuiabana,-15.10075,-55.56185,6616.181,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:44
+5103056,Cláudia,Teles Pires,-11.4783,-55.0804,3877.483,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:44
+5103106,Cocalinho,Médio Araguaia,-13.8449,-51.12125,16643.656,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:45
+5103205,Colíder,Região Norte,-10.571,-55.43255,3113.592,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:46
+5103254,Colniza,Noroeste,-9.41775,-60.28315,28042.473,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:47
+5103304,Comodoro,Vale do Guaporé,-13.1932,-59.78005,21584.611,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:47
+5103353,Confresa,Araguaia Xingu,-10.4119,-51.6752,5805.971,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:48
+5103361,Conquista D'Oeste,Vale do Guaporé,-14.61885,-59.33705,2676.474,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:49
+5103379,Cotriguaçu,Noroeste,-9.465,-58.66145,9513.36,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:50
+5103403,Cuiabá,Baixada Cuiabana,-15.80165,-55.7214,4335.708,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:51
+5103437,Curvelândia,Oeste,-15.62035,-57.88695,358.428,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:51
+5103452,Denise,Médio Norte,-14.7198,-56.9426,1273.176,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:52
+5103502,Diamantino,Centro Norte,-14.12765,-56.85575,8307.744,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:53
+5103601,Dom Aquino,Região Sul,-15.6742,-54.7607,2182.882,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:53
+5103700,Feliz Natal,Teles Pires,-11.84965,-54.25925,11683.268,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:54
+5103809,Figueirópolis D'Oeste,Vale do Guaporé,-15.5033,-58.70975,888.597,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:55
+5103858,Gaúcha do Norte,Médio Araguaia,-12.87545,-53.4503,16998.794,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:56
+5103908,General Carneiro,Garças Araguaia,-15.55165,-53.32045,4536.829,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:56
+5103957,Glória D'Oeste,Oeste,-15.8688,-58.34625,839.975,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:57
+5104104,Guarantã do Norte,Vale do Peixoto,-9.7803,-54.6223,4760.538,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:58
+5104203,Guiratinga,Região Sul,-16.37765,-53.60275,5093.08,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:40:59
+5104500,Indiavaí,Oeste,-15.3353,-58.60535,572.62,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:00
+5104526,Ipiranga do Norte,Teles Pires,-11.94375,-56.05955,3440.607,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:00
+5104542,Itanhangá,Teles Pires,-12.14275,-56.76695,2930.884,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:01
+5104559,Itaúba,Região Norte,-11.137,-55.62135,4542.202,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:02
+5104609,Itiquira,Região Sul,-17.2976,-54.64145,8732.385,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:03
+5104807,Jaciara,Região Sul,-15.95955,-55.21575,2442.208,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:03
+5104906,Jangada,Baixada Cuiabana,-15.32995,-56.64625,1111.64,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:04
+5105002,Jauru,Oeste,-15.3002,-58.8948,1351.898,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:05
+5105101,Juara,Vale do Arinos,-11.2294,-57.5672,22665.865,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:06
+5105150,Juína,Noroeste,-11.49295,-59.39265,26519.641,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:06
+5105176,Juruena,Noroeste,-10.4594,-58.624,3207.641,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:07
+5105200,Juscimeira,Região Sul,-16.19705,-54.8471,2307.84,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:08
+5105234,Lambari D'Oeste,Oeste,-15.45475,-57.80575,1810.411,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:09
+5105259,Lucas do Rio Verde,Teles Pires,-13.04655,-56.264,3699.771,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:10
+5105309,Luciara,Norte Araguaia Karajá,-10.9804,-51.0449,4284.075,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:11
+5105507,Vila Bela da Santíssima Trindade,Vale do Guaporé,-15.13625,-60.00405,13548.87,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:11
+5105580,Marcelândia,Região Norte,-10.92325,-53.99605,12342.036,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:12
+5105606,Matupá,Vale do Peixoto,-9.9809,-54.41565,5222.389,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:13
+5105622,Mirassol D'Oeste,Oeste,-15.60305,-58.08305,1091.732,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:14
+5105903,Nobres,Centro Norte,-14.38565,-55.84385,3943.253,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:15
+5106000,Nortelândia,Centro Norte,-14.3914,-56.7382,1320.652,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:15
+5106109,Nossa Senhora do Livramento,Baixada Cuiabana,-15.91565,-56.58685,5528.662,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:19
+5106158,Nova Bandeirantes,Alto Tapajós,-9.6907,-58.117,9600.219,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:20
+5106174,Nova Nazaré,Médio Araguaia,-14.1448,-51.89945,4027.765,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:21
+5106182,Nova Lacerda,Vale do Guaporé,-14.40075,-59.81095,4791.346,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:21
+5106190,Nova Santa Helena,Região Norte,-10.91235,-54.94975,2397.075,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:22
+5106208,Nova Brasilândia,Baixada Cuiabana,-14.74295,-55.0689,3297.048,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:23
+5106216,Nova Canaã do Norte,Região Norte,-10.66615,-56.09495,5994.147,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:24
+5106224,Nova Mutum,Teles Pires,-13.5221,-56.0777,9571.882,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:24
+5106232,Nova Olímpia,Médio Norte,-14.7823,-57.4265,1346.158,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:25
+5106240,Nova Ubiratã,Teles Pires,-12.9721,-54.61955,12528.63,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:26
+5106257,Nova Xavantina,Garças Araguaia,-14.67755,-52.31065,5535.635,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:27
+5106265,Novo Mundo,Vale do Peixoto,-9.8125,-55.44555,5833.883,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:28
+5106273,Novo Horizonte do Norte,Vale do Arinos,-11.38635,-57.29215,925.773,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:28
+5106281,Novo São Joaquim,Garças Araguaia,-15.0532,-53.3046,5202.083,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:29
+5106299,Paranaíta,Alto Tapajós,-9.56525,-56.6927,4842.435,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:32
+5106307,Paranatinga,Região Sul,-13.3407,-54.16205,24275.375,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:33
+5106315,Novo Santo Antônio,Norte Araguaia Karajá,-12.3097,-50.96695,4414.099,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:33
+5106372,Pedra Preta,Região Sul,-16.7899,-54.21315,3862.833,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:34
+5106422,Peixoto de Azevedo,Vale do Peixoto,-10.19435,-53.8866,14512.221,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:35
+5106455,Planalto da Serra,Baixada Cuiabana,-14.5451,-54.6405,2449.752,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:35
+5106505,Poconé,Baixada Cuiabana,-16.7988,-56.95435,17215.277,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:36
+5106653,Pontal do Araguaia,Garças Araguaia,-15.91645,-52.6661,2749.515,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:37
+5106703,Ponte Branca,Garças Araguaia,-16.6713,-52.94575,697.676,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:41
+5106752,Pontes e Lacerda,Vale do Guaporé,-15.42025,-59.50655,8581.691,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:42
+5106778,Porto Alegre do Norte,Araguaia Xingu,-10.7641,-51.6054,4002.351,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:42
+5106802,Porto dos Gaúchos,Vale do Arinos,-11.77185,-56.7037,6877.162,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:43
+5106828,Porto Esperidião,Oeste,-15.89285,-58.95855,5862.148,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:44
+5106851,Porto Estrela,Médio Norte,-15.5389,-57.2419,2035.699,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:45
+5107008,Poxoréu,Região Sul,-15.81005,-54.21445,6978.637,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:45
+5107040,Primavera do Leste,Região Sul,-15.13985,-54.2371,5472.712,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:46
+5107065,Querência,Médio Araguaia,-12.22595,-52.82355,17865.646,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:47
+5107107,São José dos Quatro Marcos,Oeste,-15.5315,-58.30035,1286.899,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:48
+5107156,Reserva do Cabaçal,Oeste,-14.9339,-58.48785,1345.095,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:48
+5107180,Ribeirão Cascalheira,Médio Araguaia,-12.87225,-51.5337,11380.562,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:49
+5107198,Ribeirãozinho,Garças Araguaia,-16.46015,-52.7737,629.808,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:50
+5107206,Rio Branco,Oeste,-15.282,-58.1202,537.705,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:51
+5107248,Santa Carmem,Teles Pires,-11.94735,-54.8477,3852.947,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:51
+5107263,Santo Afonso,Médio Norte,-14.43305,-57.3343,1160.188,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:52
+5107297,São José do Povo,Região Sul,-16.4755,-54.2715,505.302,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:53
+5107305,São José do Rio Claro,Centro Norte,-13.4365,-56.865,4549.108,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:54
+5107354,São José do Xingu,Araguaia Xingu,-10.68195,-52.6351,7504.764,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:54
+5107404,São Pedro da Cipa,Região Sul,-15.96855,-54.75365,340.423,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:55
+5107578,Rondolândia,Vale do Guaporé,-10.3144,-60.9988,12759.425,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:56
+5107602,Rondonópolis,Região Sul,-16.5844,-54.5913,4837.792,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:57
+5107701,Rosário Oeste,Centro Norte,-14.872,-55.8997,7369.802,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:57
+5107743,Santa Cruz do Xingu,Araguaia Xingu,-10.03955,-52.53315,5634.136,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:58
+5107750,Salto do Céu,Oeste,-15.00365,-58.0065,1750.652,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:41:59
+5107768,Santa Rita do Trivelato,Teles Pires,-13.7806,-55.32,4739.717,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:42:00
+5107776,Santa Terezinha,Araguaia Xingu,-10.28845,-50.7983,6505.898,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:42:00
+5107792,Santo Antônio do Leste,Região Sul,-14.76825,-53.74455,3412.24,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:42:01
+5107800,Santo Antônio do Leverger,Baixada Cuiabana,-16.535,-55.5164,9529.97,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:42:02
+5107859,São Félix do Araguaia,Norte Araguaia Karajá,-11.4776,-51.98775,16764.66,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:42:03
+5107875,Sapezal,Médio Norte,-12.9611,-58.5615,13673.084,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:42:04
+5107883,Serra Nova Dourada,Norte Araguaia Karajá,-12.0678,-51.37205,1498.334,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:42:05
+5107909,Sinop,Teles Pires,-11.74255,-55.4515,3973.832,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:42:06
+5107925,Sorriso,Teles Pires,-12.69435,-55.6009,9344.535,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:42:07
+5107941,Tabaporã,Vale do Arinos,-11.06845,-56.45955,8498.207,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:42:07
+5107958,Tangará da Serra,Médio Norte,-14.488,-58.0287,11682.358,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:42:08
+5108006,Tapurah,Teles Pires,-12.5744,-56.51875,4468.024,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:42:09
+5108055,Terra Nova do Norte,Vale do Peixoto,-10.48085,-54.9851,2412.774,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:42:10
+5108105,Tesouro,Região Sul,-15.9211,-53.4531,4219.205,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:42:10
+5108204,Torixoréu,Garças Araguaia,-16.30065,-52.8413,2432.953,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:42:11
+5108303,União do Sul,Teles Pires,-11.5342,-54.2551,4600.408,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:42:12
+5108352,Vale de São Domingos,Vale do Guaporé,-15.02635,-58.9896,1916.033,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:42:13
+5108402,Várzea Grande,Baixada Cuiabana,-15.5587,-56.2474,732.057,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:42:13
+5108501,Vera,Teles Pires,-12.8765,-55.33005,3052.932,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:42:14
+5108600,Vila Rica,Araguaia Xingu,-10.0161,-51.41675,7468.271,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:42:15
+5108808,Nova Guarita,Região Norte,-10.28565,-55.36815,1113.526,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:42:16
+5108857,Nova Marilândia,Médio Norte,-14.2956,-57.2998,1914.199,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:42:16
+5108907,Nova Maringá,Centro Norte,-12.75835,-57.237,11629.301,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:42:17
+5108956,Nova Monte Verde,Alto Tapajós,-9.9274,-57.2733,5176.369,IBGE Malhas v3 - qualidade mínima; centroide por bounding box; área aproximada calculada,2026-05-23T18:42:18
